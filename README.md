@@ -64,10 +64,14 @@ This repository contains all the necessary files and configurations for simulati
 - The import of the real data from the ASIC is done from `data.csv`. THe first line contains the injected charge in each pixel. After the second line each line is the resulting ADC values from one pixel. In some cases very low injections of charge do not give ADC values in some of the pixels.
 - The result in the root files from the  `CalibrationFlatTreeWriter` and `CalibrationTreeWriter` are the true charge, the ADC value for that charge and the reconstructed (calibrated) charge.
 
+### Neutrino Events:
+- The import of the GENIE files is done in  **`DepositionGenerator`**.
+- The neutrino events are genrated randomly around the tungsten area of the preshower detector. 
+
 ### Analysis:
 - For analysis, use the **`CalibrationFlatTreeWriter`** module (preferred by the team) or the alternative **`CalibrationTreeWriter`**.
 - The file `asic_map.cpp` makes the heatmap of one of the central ASICs of the preshower detector. In my case the ASIC that I shot the photons. You can adapt this depending on the ASIC map you want to plot. You can also adjust it based on whether you want to plot the zoomed ASIC or the full ASIC. This cpp file is for the output root file from the `CalibrationTreeWriter`.
-- Example root files from 2 photons shot with 1 TeV energy each and distance 200 microns can be found here: `[here](https://drive.google.com/drive/folders/1u6vDf8uHQeF3-Sme_m_0nZH-jpewMtyE?usp=sharing)`
+- Example root files from 2 photons shot with 1 TeV energy each and distance 200 microns can be found here: [here](https://drive.google.com/drive/folders/1u6vDf8uHQeF3-Sme_m_0nZH-jpewMtyE?usp=sharing)
 
 ### Geometry:
 - The detector geometry is defined in the `geometry_preshower.conf` file.
