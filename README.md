@@ -78,5 +78,3 @@ This repository contains all the necessary files and configurations for simulati
 - In the geometry configuration file the ASICs are depicted with: `[Detector_0_#_#]`. The first number represents the number of plane, starting from 0. For six planes: 0,1,2,3,4,5,6. Therefore if you wish to simulate some planes without ASICs, just delete the corresponding ASICs. For intsance if you do not want to have the ASICs from plane 3, you can delete all the detectors with: `[Detector_2_#_#]`.
 
 ---
-
-For any questions or further assistance, feel free to reach out in: `rafaella.elek@gmail.com`
