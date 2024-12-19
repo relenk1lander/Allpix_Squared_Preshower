@@ -61,16 +61,18 @@ This repository contains all the necessary files and configurations for simulati
 
 ### Calibration:
 - Calibration is done using the **`Calibration`** module.
+- The import of the real data from the ASIC is done from `data.csv`. THe first line contains the injected charge in each pixel. After the second line each line is the resulting ADC values from one pixel. In some cases very low injections of charge do not give ADC values in some of the pixels.
+- The result in the root files from the  `CalibrationFlatTreeWriter` and `CalibrationTreeWriter` are the true charge, the ADC value for that charge and the reconstructed (calibrated) charge.
+
+### Analysis:
 - For analysis, use the **`CalibrationFlatTreeWriter`** module (preferred by the team) or the alternative **`CalibrationTreeWriter`**.
+- The file `asic_map.cpp` makes the heatmap of one of the central ASICs of the preshower detector. In my case the ASIC that I shot the photons. You can adapt this depending on the ASIC map you want to plot. You can also adjust it based on whether you want to plot the zoomed ASIC or the full ASIC. This cpp file is for the output root file from the `CalibrationTreeWriter`.
+- Example root files from 2 photons shot with 1 TeV energy each and distance 200 microns can be found here: `[here](https://drive.google.com/drive/folders/1u6vDf8uHQeF3-Sme_m_0nZH-jpewMtyE?usp=sharing)`
 
 ### Geometry:
-- No GDML file is used for the geometry.
 - The detector geometry is defined in the `geometry_preshower.conf` file.
-
-### TCAD Simulations:
-- TCAD simulations were conducted by Jordi.
-- The electric field map may not be fully finalized due to the large size of the FASER ASIC. Further details will be confirmed during the meeting.
+- In the geometry configuration file the ASICs are depicted with: `[Detector_0_#_#]`. The first number represents the number of plane, starting from 0. For six planes: 0,1,2,3,4,5,6. Therefore if you wish to simulate some planes without ASICs, just delete the corresponding ASICs. For intsance if you do not want to have the ASICs from plane 3, you can delete all the detectors with: `[Detector_2_#_#]`.
 
 ---
 
-For any questions or further assistance, feel free to reach out during the remaining time of my contract.
+For any questions or further assistance, feel free to reach out in: `rafaella.elek@gmail.com`
