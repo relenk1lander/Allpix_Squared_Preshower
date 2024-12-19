@@ -4,7 +4,6 @@ This repository contains all the necessary files and configurations for simulati
 
 **Repository Link:** [Allpix Squared Final Detector Effects for FASER](https://gitlab.cern.ch/rkotitsa/allpix-squared/-/tree/final_detector_effects_faser?ref_type=heads)
 
-Until the end of my contract (20 Dec 2024), I will continue cleaning the repository and adding any additional configuration files as needed.
 
 ---
 
@@ -50,7 +49,8 @@ Until the end of my contract (20 Dec 2024), I will continue cleaning the reposit
 - **`run_genie.conf`**: Updated main configuration file with the `DepositionGenerator`.
 - **`geometry_preshower.conf`**: Configuration for the preshower detector.
 - **`data.csv`**: Real data from the ASIC for digitization and calibration.
-- **Root File**: Required root file from GENIE software. Download from [this link](https://cernbox.cern.ch/s/dvQ8jFXogZKCCcc) and add the desired file (`nu_mu`, `nu_e`, or `nu_tau`) to the `workspace_genie` folder.
+- **Root File**: Required root file from GENIE software. The GENIE neutrino samples from the FASERnu team can be found here: `/eos/project/f/faser-preshower/neutrino-simulation-input`
+-  Add the desired file (`nu_mu`, `nu_e`, or `nu_tau`) to the `workspace_genie` folder. The simulation runs with the file with this name: `nue_faser_1M.dump.root`, `nutau_faser_1M.dump.root`, `numu_faser_1M.dump.root`
 
 ---
 
